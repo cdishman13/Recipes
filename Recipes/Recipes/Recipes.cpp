@@ -6,24 +6,35 @@
 using namespace std;
 
 void printRecipe(string ingr[], string instr[]);
-Recipe readRecipe();
+Recipe readRecipe(Recipe r);
 
 int main()
 {
-    cout << "Hello World" << endl;
-    string ingr[4];
-    string instr[4];
-    Recipe rec;
-    rec = readRecipe();
+    int ingrS;
+    int instS;
+    cout << "Number of ingredients: ";
+    cin >> ingrS;
+    cout << "Number of instrucstions: ";
+    cin >> instS;
+    Recipe rec(ingrS, instS);
+    rec = readRecipe(rec);
     cout << rec.title;
-    //printRecipe(ingr, instr);
 }
 
-Recipe readRecipe() {
-    Recipe r;
+Recipe readRecipe(Recipe r) {
+    cin.ignore();
     cout << "Title: ";
-    cin >> r.title;
-
+    getline(cin, r.title);
+    cout << "ingredients: " << endl;
+    for (int i = 0; i < sizeof(r.ingredients); i++) {
+        cout << i + 1 << ": ";
+        getline(cin, r.ingredients[i]);
+    }
+    cout << "instructions: " << endl;
+    for (int i = 0; i < sizeof(r.instructions); i++) {
+        cout << i + 1 << ": ";
+        getline(cin, r.instructions[i]);
+    }
     return r;
     //Look for INGREDIENTS:
     //While the next word isn't INSTRUCTIONS:
