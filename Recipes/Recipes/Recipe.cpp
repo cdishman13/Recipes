@@ -11,3 +11,9 @@ Recipe::~Recipe()
 	free(ingredients);
 	free(instructions);
 }
+
+ostream& operator<<(ostream& os, const Recipe r)
+{
+	
+	return os;
+}

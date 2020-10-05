@@ -12,6 +12,7 @@ public:
 
 	Recipe(int ingrS, int instS);
 	~Recipe();
+	friend ostream& operator<<(ostream& os, const Recipe r);
 
 private:
 
