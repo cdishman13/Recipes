@@ -1,6 +1,6 @@
 #pragma once
-#include <string>
-
+#include <string.h>
+/*
 using namespace std;
 
 class Recipe
@@ -17,4 +17,6 @@ public:
 private:
 
 };
+
+*/
 

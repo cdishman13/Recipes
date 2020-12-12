@@ -1,5 +1,5 @@
 #include "Recipe.h"
-
+/*
 Recipe::Recipe(int ingrS, int instS)
 {
 	ingredients = (string*) malloc(ingrS);
@@ -17,3 +17,5 @@ ostream& operator<<(ostream& os, const Recipe r)
 	
 	return os;
 }
+
+*/
